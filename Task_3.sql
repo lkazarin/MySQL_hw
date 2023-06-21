@@ -23,11 +23,11 @@ SELECT OrderID,
 FROM Orders;
 
 -- 4) Вывести список стран, которые поставляют морепродукты
-SELECT DISTINCT Suppliers.Country
-FROM Suppliers
-JOIN Products ON Suppliers.SupplierID = Products.SupplierID
-JOIN Categories ON Products.CategoryID = Categories.CategoryID
-WHERE Products.CategoryID = 'Seafood';
+SELECT Suppliers.Country
+FROM Products
+JOIN Categories ON Products.CategoryID=Categories.CategoryID
+JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID
+WHERE Categories.CategoryID=8
 
 -- 5) Очистить поле ContactName у всех клиентов не из China
 UPDATE Customers
