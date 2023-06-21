@@ -16,9 +16,9 @@ LIMIT 2;
 -- 3) Вывести заказы, добавив поле доставлено (или нет), учитывая, 
 -- что доставлены только 10248 и 10249
 SELECT OrderID, 
-    CASE 
-        WHEN OrderID IN (10248, 10249) THEN 'Yes'
-        ELSE 'No'
+CASE 
+    WHEN OrderID IN (10248, 10249) THEN 'Yes'
+    ELSE 'No'
     END AS Delivered
 FROM Orders;
 
