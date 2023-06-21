@@ -23,7 +23,7 @@ CASE
 FROM Orders;
 
 -- 4) Вывести список стран, которые поставляют морепродукты
-SELECT Suppliers.Country
+SELECT DISTINCT Suppliers.Country
 FROM Products
 JOIN Categories ON Products.CategoryID=Categories.CategoryID
 JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID
